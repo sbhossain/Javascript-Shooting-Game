@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<script src="components/loader.js"></script>
+	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript">
+		document.addEventListener("deviceready", onDeviceReady, false);
+          function onDeviceReady(){
+              console.log("Cordova envioronment is ready.");
+          }
+	</script>
+	<style>
+		html {
+			height: 100%;
+		}
+
+		body {
+			width: 100%;
+			min-height: 100%;
+			margin: 0;
+			padding: 0;
+			background-image: url(images/loginbackground.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+      z-index: -1; 
+		}
+
+		#search {
+			margin: auto;
+			height: 280px;
+			width: 70%;
+			border-radius: 5px;
+			/* border: 1px solid yellow; */
+			/* box-shadow: 1px 1px 1px 1px yellow; */
+			padding: 10px;
+			margin-top: 60%;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+
+		.titlebar {
+      font-family: "Papyrus", Fantasy	;
+			text-align: center;
+			/* background-color: powderblue; */
+			font-size: 200%;
+      color: white;
+		}
+
+    #button1{
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      margin-top: 10px
+    }
+
+    #searchbox{
+      margin-left: 10px;
+      width: 265px;
+      height: 45px;
+      font-size: 15px;
+      margin-top:-50px;
+    }
+	</style>
+</head>
+
+<body>
+	<div id="search" ">
+		<form name="frmSearch " action=" " method="GET ">
+			<p id="titlebar " class="titlebar ">Pick Hero</p>
+      <input id="searchbox" type="text " name="inputbox " value="Green tree">
+			<p align="center "><input id="button1" value="Start" onClick="mySearch(this.form)"></p>
+		</form>
+		<p align="center " id="progress "></p>
+	</div>
+	<!-- <div id="results " style="display:none; ">results here</div> -->
+</body>
+<script type="text/javascript" src="search.js"></script>
+</html>

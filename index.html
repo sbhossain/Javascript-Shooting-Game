@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<script src="components/loader.js"></script>
+	<link rel="stylesheet" href="components/loader.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script>
+
+	</script>
+	<script src="search.js"></script>
+	<style>
+		html {
+			height: 100%;
+		}
+
+		body {
+			width: 100%;
+			min-height: 100%;
+			margin: 0;
+			padding: 0;
+			background-image: url(images/loginbackground.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			z-index: -1;
+		}
+
+		#search {
+			margin: auto;
+			height: 280px;
+			width: 70%;
+			border-radius: 5px;
+			/* border: 1px solid yellow; */
+			/* box-shadow: 1px 1px 1px 1px yellow; */
+			padding: 10px;
+			margin-top: 60%;
+			background-color: rgba(0, 0, 0, 0.6);
+      border: 5px;
+    }
+
+    #searchbar{
+      margin-left: 10px;
+      width: 265px;
+      height: 45px;
+      font-size: 15px;
+      margin-top:-50px;
+    }
+
+    #btn{
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      margin-top: 10px
+    }
+
+    #results{
+      margin-top: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    #titlebar1{
+      margin-top: 5px;
+      text-align: center;
+    }
+
+	</style>
+
+</head>
+
+<body>
+<div style="padding-top: 20px;">	
+  <div id="titlebar1" style="display:none;" class="titlebar1">Select Hero...</div>
+
+	<div id="search" >
+    <p id="titlebar" class="titlebar">Search Hero</p>
+		<form name="frmSearch" action="" method="GET">
+			<!-- <p class="mytext">Search for:</p> -->
+			<input id="searchbar" type="text" name="inputbox" value="">
+			<p align="center">
+				<input id="btn" value="Go" onClick="mySearch(this.form)">
+			</p>
+		</form>
+		<p align="center" id="progress"></p>
+	</div>
+	<div id="results" style="display:none;"><h1>results here</h1></div>
+</div>
+</body>
+
+</html>

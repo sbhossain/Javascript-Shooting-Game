@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+	<script src="components/loader.js"></script>
+	<link rel="stylesheet" href="components/loader.css">
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+	<script type="text/javascript">
+		document.addEventListener("deviceready", onDeviceReady, false);
+          function onDeviceReady(){
+              console.log("Cordova envioronment is ready.");
+          }
+	</script>
+ 
+	<style>
+		.flex-container {
+			display: flex;
+			align-items: stretch;
+			background-color: powderblue;
+		}
+
+		.flex-container>div {
+			color: black;
+			width: 10%;
+			margin: 1%;
+			text-align: center;
+			line-height: 120%;
+			font-size: 120%;
+			align-self: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div>
+		<div style="float: left">
+			<img src="images/play.png" alt="Trulli" width="25" height="25" onclick="StartGame()">
+			<img src="images/stop.png" alt="Trulli" width="25" height="25" onclick="StopGame()">
+			<img src="images/pause.png" alt="Trulli" width="25" height="25" onclick="">
+			<img src="images/volume.png" alt="Trulli" width="25" height="25" onclick="muteVolume()">
+		</div>
+		<div style="float:right">
+      <div style="float:left"><img src="" id="usrImg" alt="propic" width="25" height="25" style="border-radius: 5px" onclick="">
+			<div style="text-align: right; float:left; margin-right:100px; margin-top:3px">Score: <span id="Score" style="color: red"> </span> </div>
+			<div style="text-align: right; float:right; margin-top:3px"><img src="images/health1.png" id="healthbar" alt="healthbarpic" width="80" height="16"></div>
+		</div>
+	</div>
+
+	<canvas id="canvas" style="background-color: black"></canvas>
+</body>
+<!-- <script type="text/javascript" src="search.js"></script> -->
+<script type="text/javascript" src="game.js"></script>
+</html>
